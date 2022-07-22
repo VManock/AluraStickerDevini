@@ -10,8 +10,6 @@ import javax.imageio.ImageIO;
 public class GeradoraDeFigurinhas {
 
 
-    private Font fonte;
-
     public void cria(InputStream inputStream, String nomeArquivo) throws Exception {   
 
         // leitura da imagem
@@ -36,7 +34,7 @@ public class GeradoraDeFigurinhas {
         graphics.setFont(fonte);
 
         // escrever uma frase na nova imagem
-        graphics.drawString("Topzera", (largura/2)-125 , novaAltura - 100);
+        graphics.drawString("Topzera", (largura/2)-75 , novaAltura - 100);
 
         // escrever a nova imagem em arquivo
         ImageIO.write(novaImagem, "png", new File(nomeArquivo));
